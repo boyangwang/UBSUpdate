@@ -1,0 +1,64 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+.navbar.navbar-inverse.navbar-fixed-top {
+	background-image: linear-gradient(to bottom,#D1D9E4 0,#CFDAE4 100%);
+	border-width: 0px;
+}
+
+button.navbar-toggle {
+	border-color: #ffffff !important; 
+	/*background-color: #ffffff;*/
+}
+
+.manage, .discover {
+	font-size: 20px;
+}
+
+.manage {
+	float: left;
+}
+
+.discover {
+	float: right;
+}
+
+.updates {
+	font-size: 44px;
+	color: #FF0A1B;	
+	/*font-weight: bold;*/
+	vertical-align: middle;
+	font-family: "Times New Roman";
+}
+
+.logo {
+	vertical-align: middle;
+}
+
+.glyphicon-chevron-up {
+	color: #009900;
+}
+
+.glyphicon-chevron-down {
+	color: #CC0000;
+}
+
+.glyphicon {
+	font-size: 24px;
+}
+
+.change-number {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+
+
+
+
+
+
+
