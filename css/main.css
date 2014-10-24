@@ -55,8 +55,22 @@ button.navbar-toggle {
 	font-weight: bold;
 }
 
+.title {
+	font-family: "proxima-nova", Arial, Helvetica, sans-serif;
+	font-size: 16px;
+}
 
+.back-button {
+	color: grey;
+	font-size: 24px;
+	vertical-align: middle;
+	font-weight: lighter !important;
+}
 
+.back-button.isDetail {
+	color: black;
+	cursor: pointer;
+}
 
 
 

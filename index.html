@@ -15,6 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
     <style>
         body {
             padding-top: 50px;
@@ -40,12 +41,14 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
+            &nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-left back-button"></span>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <img src="./img/UBS-logo.png" height="50px" class="logo"></img><span class="updates">Updates</span>
         </div>
         <div class="navbar-collapse collapse row">
             <div class="col-xs-3"></div>
             <div class="col-xs-6">
-                <a href="#" class="manage">Manage</a>&nbsp&nbsp
+                <a href="#" class="manage">Manage</a>
                 <a href="#" class="discover">Discover</a></div>
             <div class="col-xs-3"></div>
 
@@ -55,46 +58,47 @@
 </div>
 
 <!-- Main jumbotron for a primary marketing message or call to action -->
-<div class="jumbotron">
+
+<div class="titles-div">
     <hr>
-    
-    <div class="container">
+    <div class="jumbotron">
+        <div class="container">
 
-        <p>Title</p>
-        <span class="change-number">1</span> <span class="glyphicon glyphicon-chevron-up"></span>
+            <a class="title" data-serial=1 href="#">GM Profit Rises as Barra Seeks to Put Recalls Behind Company</a><br>
+            <span class="change-number">1</span> <span class="glyphicon glyphicon-chevron-up"></span>
 
-        <hr>
+        </div>
     </div>
+    <div class="jumbotron">
+        <div class="container">
 
-    <div class="container">
+            <a class="title" href="#">GM Profit Rises as Barra Seeks to Put Recalls Behind Company</a><br>
+            <span class="change-number">1</span> <span class="glyphicon glyphicon-chevron-up"></span>
 
-        <p>Title</p>
-        <span class="change-number">1</span> <span class="glyphicon glyphicon-chevron-up"></span>
-
-        <hr>
-    </div>
-
-    <div class="container">
-
-        <p>Title</p>
-        <span class="change-number">2</span> <span class="glyphicon glyphicon-chevron-down"></span>
-
-        <hr>
-    </div>
+        </div>
+    </div>    
 </div>
 
-<hr>
+<div class="container-fluid details-div" style="display: none">
+
+</div>
+
 
 <footer>
+    <hr style="margin-bottom: 15px">
     <p>&copy; UBS 2014</p>
 </footer>
 </div> <!-- /container -->
 
+<!-- templates -->
+
+<!-- end of templates -->
+
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
-
+<script src="js/vendor/jquery-ui.js"></script>
 <script src="js/vendor/bootstrap.min.js"></script>
-
+<script src="js/vendor/handlebars-v2.0.0.js"></script>
 <script src="js/main.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
