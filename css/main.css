@@ -27,9 +27,9 @@ button.navbar-toggle {
 }
 
 .updates {
-	font-size: 44px;
+	font-size: 44px; 
 	color: #FF0A1B;	
-	/*font-weight: bold;*/
+	/*font-weight: bold; comment*/
 	vertical-align: middle;
 	font-family: "Times New Roman";
 }
