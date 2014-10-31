@@ -3,18 +3,39 @@ function toDetailScreen(e) {
 	var serial = $(this).attr('data-serial');
 	var html = loadTemplate('templates/article-' + serial + '.html');
 	var detail = Handlebars.compile(html);
-	$('.titles-div').hide("slide", { direction: "left" }, 300);
+	$('.titles-div').hide("slide", { direction: "left" }, 200);
+	$('.details-div').empty();
 	$('.details-div').append(detail());
-	$('.details-div').show("slide", { direction: "right" }, 600);
+
+	var insights = createInsights();
+	$('.details-div').append(insights);
+
+	$('.details-div').show("slide", { direction: "right" }, 400);
 	$('.back-button').addClass('isDetail');
+}
+
+function createInsights() {
+	var insights = $('<div class="insights"><img src="./img/UBS-logo.png" height="50px" class="logo"></img><span class="updates">Insights</span></div>');
+	var social = Handlebars.compile(loadTemplate('templates/social.html'));
+	var economy = Handlebars.compile(loadTemplate('templates/economy.html'));
+	var analytics = Handlebars.compile(loadTemplate('templates/analytics.html'));
+	var relatedlinks = Handlebars.compile(loadTemplate('templates/relatedlinks.html'));
+	var companyoverview = Handlebars.compile(loadTemplate('templates/companyoverview.html'));
+	insights.append(companyoverview);
+	insights.append(analytics);
+	insights.append(social);
+	insights.append(economy);
+	insights.append(relatedlinks);
+
+	return insights;
 }
 
 function backToHome(e) {
 	if (!$(this).hasClass('isDetail')) {
 		return false;
 	}
-	$('.details-div').hide("slide", { direction: "right" }, 300);
-	$('.titles-div').show("slide", { direction: "left" }, 600);
+	$('.details-div').hide("slide", { direction: "right" }, 200);
+	$('.titles-div').show("slide", { direction: "left" }, 400);
 	$(this).removeClass('isDetail');
 }
 
@@ -22,7 +43,6 @@ function loadTemplate(path) {
 	var html = '';
 	$.ajax({
         url: path,
-        cache: true,
         success: function (data) {
             html = data;
         },

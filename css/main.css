@@ -72,7 +72,11 @@ button.navbar-toggle {
 	cursor: pointer;
 }
 
-
+.source {
+	float: right;
+	font-weight: bold;
+	color: #e1e8ed;
+}
 
 
 
