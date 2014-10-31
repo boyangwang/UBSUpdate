@@ -3,13 +3,14 @@ function toDetailScreen(e) {
 	var serial = $(this).attr('data-serial');
 	var html = loadTemplate('templates/article-' + serial + '.html');
 	var detail = Handlebars.compile(html);
-	$('.titles-div').hide("slide", { direction: "left" }, 200);
+	
 	$('.details-div').empty();
-	$('.details-div').append(detail());
+	$('.details-div').append(detail);
 
 	var insights = createInsights();
 	$('.details-div').append(insights);
 
+	$('.titles-div').hide("slide", { direction: "left" }, 200);
 	$('.details-div').show("slide", { direction: "right" }, 400);
 	$('.back-button').addClass('isDetail');
 }
