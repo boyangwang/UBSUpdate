@@ -75,8 +75,36 @@ button.navbar-toggle {
 .source {
 	float: right;
 	font-weight: bold;
-	color: #e1e8ed;
+	color: grey;
 }
 
+.analyst-name {
+	color: blue;
 
+}
+
+.unopened-chatbox {
+	/*background-color: #999;*/
+	height: 32px;
+	cursor: pointer;
+	opacity: 0.2;
+}
+.unopened-chatbox:hover {
+	opacity: 1;
+}
+
+.speech-bubble {
+		position: relative;
+	width: 280px;
+	height: 100px;
+	text-align: center;
+	background-color: #fff;
+	border: 1px solid #bbb;
+	-webkit-border-radius: 10px;
+	-moz-border-radius:80px;
+	border-radius: 10px;
+	-webkit-box-shadow: 2px 2px 4px #888;
+	-moz-box-shadow: 2px 2px 4px #888;
+	box-shadow: 2px 2px 4px #888;
+}
 

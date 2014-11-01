@@ -4,15 +4,42 @@ function toDetailScreen(e) {
 	var html = loadTemplate('templates/article-' + serial + '.html');
 	var detail = Handlebars.compile(html);
 	
+	$('.titles-div').hide("slide", { direction: "left" }, 200);
+
 	$('.details-div').empty();
 	$('.details-div').append(detail);
-
+	var newArticleBody = $('<div class="article_body"  itemprop="articleBody">');
+	$('.article_body p').each(function(idx, value) {
+		var row = $('<div class="row">');
+		var col11 = $('<div class="col-xs-11" style="margin: 0px; padding: 0px;";>');
+		var col1 = $('<div class="col-xs-1" style="margin: 0px ;padding: 0px !important;">');
+		row.append(col11).append(col1);
+		col11.append(value);
+		var chatbox = $('<img class="unopened-chatbox" src="img/MessageBubble.png">');
+		col1.append(chatbox);
+		newArticleBody.append(row);
+	});
+	$('.article_body').replaceWith(newArticleBody);
+	
 	var insights = createInsights();
 	$('.details-div').append(insights);
 
-	$('.titles-div').hide("slide", { direction: "left" }, 200);
+	
 	$('.details-div').show("slide", { direction: "right" }, 400);
 	$('.back-button').addClass('isDetail');
+	$('.unopened-chatbox').on('click', function(e) {
+
+		$(this).css('opacity', '1');
+		var speechBubble = $('<textarea class="speech-bubble" rows="4" cols="20" style="font-size: 12pt;font-family: Arial; line-height: 1.0;">');
+		(speechBubble.appendTo($(this).parent()));
+		$.scrollTo(speechBubble, 100, {axis:'x'});
+		speechBubble.on('blur', function(e) {
+			$(this).hide(200);			
+			$('.unopened-chatbox').css('opacity', '0.2');
+			swal({  text: "Your comment has been sent to your UBS Wealth Manager", title:"", confirmButtonText: "OK", type: "info"});
+		});
+	});
+
 }
 
 function createInsights() {
