@@ -82,7 +82,9 @@ button.navbar-toggle {
 	color: blue;
 
 }
-
+.1-comment {
+	height: 34px;
+}
 .unopened-chatbox {
 	/*background-color: #999;*/
 	height: 32px;

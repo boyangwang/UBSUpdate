@@ -11,8 +11,8 @@ function toDetailScreen(e) {
 	var newArticleBody = $('<div class="article_body"  itemprop="articleBody">');
 	$('.article_body p').each(function(idx, value) {
 		var row = $('<div class="row">');
-		var col11 = $('<div class="col-xs-11" style="margin: 0px; padding: 0px;";>');
-		var col1 = $('<div class="col-xs-1" style="margin: 0px ;padding: 0px !important;">');
+		var col11 = $('<div class="col-xs-10" style="margin: 0px; padding: 0px;";>');
+		var col1 = $('<div class="col-xs-2" style="margin: 0px ;padding: 0px !important;">');
 		row.append(col11).append(col1);
 		col11.append(value);
 		var chatbox = $('<img class="unopened-chatbox" src="img/MessageBubble.png">');
@@ -34,6 +34,7 @@ function toDetailScreen(e) {
 		(speechBubble.appendTo($(this).parent()));
 		$.scrollTo(speechBubble, 100, {axis:'x'});
 		speechBubble.on('blur', function(e) {
+			$(this).before($('<img src="img/1comment.png" class="1-comment" style="height: 32px;">'));
 			$(this).hide(200);			
 			$('.unopened-chatbox').css('opacity', '0.2');
 			swal({  text: "Your comment has been sent to your UBS Wealth Manager", title:"", confirmButtonText: "OK", type: "info"});
