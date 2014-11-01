@@ -30,7 +30,10 @@
 		"intro": "General Motors Co. Wednesday announced it will invest $63 million in an expansion of its Lansing Delta Township Assembly Plant" },
 	]
 	"analyst recommendations": [
-		{"buy/sell": "adadas"},
+		{"recommendation": "buy",
+		"analyst": "Colin Langan",
+		"target price": "$48",
+		"date": "10/07/14"},
 	],
 	"ticker": [
 		{"stock quote":"$30.51",
